@@ -19,9 +19,11 @@ class Data{
 
 public class Main{
 
+	static Data data = new Data();
+
 	public static void inputData(){
+		
 		Scanner in = new Scanner(System.in);
-		Data data = new Data();
 
 		System.out.println("    Pengisian Data   ");
 		System.out.println("---------------------");
@@ -37,6 +39,15 @@ public class Main{
 		data.setJurusan(jur);
 	}
 
+	public static void cetakData(){
+		System.out.println("------------------------");
+		System.out.println("    Data Mahasiswa 1    ");
+		System.out.println("------------------------");
+		System.out.println("Nama    : "+data.getNama());
+		System.out.println("NIM     : "+data.getNim());
+		System.out.println("Jurusan : "+data.getJurusan());
+	}
+
 	public static void main(String[] args){
 
 		// Data data = new Data();
@@ -45,10 +56,7 @@ public class Main{
 		// data.setNim("215410072");
 		// data.setJurusan("Informatika");
 
-		// System.out.println("    Data Mahasiswa - 1    ");
-		// System.out.println("--------------------------");
-		// System.out.println("Nama    : "+data.getNama());
-		// System.out.println("NIM     : "+data.getNim());
-		// System.out.println("Jurusan : "+data.getJurusan());
+		inputData();
+		cetakData();
 	}
 }
