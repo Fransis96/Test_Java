@@ -1,5 +1,7 @@
 package programqu;
 
+import java.util.Scanner;
+
 class Data{
 	private String nama;
 	private String nim;
@@ -17,18 +19,36 @@ class Data{
 
 public class Main{
 
-	public static void main(String[] args){
-
+	public static void inputData(){
+		Scanner in = new Scanner(System.in);
 		Data data = new Data();
 
-		data.setNama("Fransis");
-		data.setNim("215410072");
-		data.setJurusan("Informatika");
+		System.out.println("    Pengisian Data   ");
+		System.out.println("---------------------");
+		System.out.print("Masukan Nama : ");
+		String nama = in.nextLine();
+		System.out.print("Masukan NIM  : ");
+		String nim = in.nextLine();
+		System.out.print("Masukan Jurusan : ");
+		String jur = in.nextLine();
 
-		System.out.println("    Data Mahasiswa - 1    ");
-		System.out.println("--------------------------");
-		System.out.println("Nama    : "+data.getNama());
-		System.out.println("NIM     : "+data.getNim());
-		System.out.println("Jurusan : "+data.getJurusan());
+		data.setNama(nama);
+		data.setNim(nim);
+		data.setJurusan(jur);
+	}
+
+	public static void main(String[] args){
+
+		// Data data = new Data();
+
+		// data.setNama("Fransis");
+		// data.setNim("215410072");
+		// data.setJurusan("Informatika");
+
+		// System.out.println("    Data Mahasiswa - 1    ");
+		// System.out.println("--------------------------");
+		// System.out.println("Nama    : "+data.getNama());
+		// System.out.println("NIM     : "+data.getNim());
+		// System.out.println("Jurusan : "+data.getJurusan());
 	}
 }
