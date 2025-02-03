@@ -1,6 +1,6 @@
 package programqu;
 
-class data{
+class Data{
 	private String nama;
 	private String nim;
 	private String jurusan;
@@ -14,10 +14,21 @@ class data{
 	public String getJurusan(){ return jurusan; }
 }
 
+
 public class Main{
 
 	public static void main(String[] args){
-		
-		System.out.println("Halo Dunia!");
+
+		Data data = new Data();
+
+		data.setNama("Fransis");
+		data.setNim("215410072");
+		data.setJurusan("Informatika");
+
+		System.out.println("    Data Mahasiswa - 1    ");
+		System.out.println("--------------------------");
+		System.out.println("Nama    : "+data.getNama());
+		System.out.println("NIM     : "+data.getNim());
+		System.out.println("Jurusan : "+data.getJurusan());
 	}
 }
